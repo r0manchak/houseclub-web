@@ -7,7 +7,8 @@ A PoC Clubhouse Web Client inspired by [Houseclub](https://github.com/grishka/Ho
 * force CORS unblock
 
 
-##Known Issues:
+## Known Issues:
+
 Currently, can't connect to any of the rooms due to the limitation of the Agora: `CAN_NOT_GET_GATEWAY_SERVER: no active status`
 
 
