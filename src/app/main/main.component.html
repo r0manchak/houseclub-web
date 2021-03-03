@@ -1,0 +1,28 @@
+<nb-card>
+  <nb-card-body *ngIf="channels$ | async as channels">
+
+    <nb-tabset>
+      <nb-tab tabTitle="Channels">
+        <nb-list>
+          <nb-list-item *ngFor="let channel of channels.channels" (click)="onJoinClick(channel)">
+            {{ channel.topic }} [{{channel.num_all}}]
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+      <nb-tab tabTitle="Events">
+        <nb-list>
+          <nb-list-item *ngFor="let event of channels.events">
+            {{ event.name }} [{{event.description}}]
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+    </nb-tabset>
+<!--
+    <ul>
+      <li *ngFor="let room of roomList$ | async">
+        {{room | json}}
+      </li>
+    </ul>
+-->
+  </nb-card-body>
+</nb-card>

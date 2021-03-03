@@ -1,0 +1,19 @@
+<nb-card>
+  <nb-card-header>Login</nb-card-header>
+  <nb-card-body>
+    <div class="phone-number" *ngIf="!isCodeSent">
+      <input nbInput [(ngModel)]="phoneNumber" placeholder="Phone number"/>
+      <button nbButton (click)="onLoginClick()">Login</button>
+    </div>
+
+   <div class="error" *ngIf="error">
+     {{error}}
+   </div>
+
+    <div class="sms-code" *ngIf="isCodeSent">
+      <input nbInput [(ngModel)]="smsCode" placeholder="SMS Code"/>
+      <button nbButton (click)="onSendCodeClick()">Send Code</button>
+    </div>
+
+  </nb-card-body>
+</nb-card>
